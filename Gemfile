@@ -34,6 +34,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 group :development do
   gem 'letter_opener_web'
+  gem 'pry-rails'
+  gem 'better_errors'
 end
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
@@ -54,3 +56,9 @@ gem 'jquery-turbolinks'
 gem'devise'
 
 gem'faker'
+
+gem'rails_admin'
+
+gem'cancan'
+
+gem 'activeresource'
