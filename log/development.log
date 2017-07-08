@@ -8835,3 +8835,52 @@ Processing by BlogsController#index as HTML
   [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
   Rendered blogs/index.html.erb within layouts/application (2.7ms)
 Completed 200 OK in 104ms (Views: 100.2ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for ::1 at 2017-07-08 19:35:10 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by TopController#index as HTML
+  Rendered top/index.html.erb within layouts/application (503.2ms)
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+Completed 200 OK in 668ms (Views: 661.1ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/assets/header.jpg" for ::1 at 2017-07-08 19:35:11 +0900
+
+
+Started GET "/blogs" for ::1 at 2017-07-08 19:35:15 +0900
+Processing by BlogsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mBlog Load (0.4ms)[0m  SELECT "blogs".* FROM "blogs"
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered blogs/index.html.erb within layouts/application (20.6ms)
+Completed 200 OK in 110ms (Views: 101.8ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/blogs/2" for ::1 at 2017-07-08 19:35:17 +0900
+Processing by BlogsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mBlog Load (0.2ms)[0m  [1mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mComment Load (0.3ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."blog_id" = $1  [["blog_id", 2]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered comments/_index.html.erb (5.6ms)
+  Rendered comments/_form.html.erb (338.8ms)
+  Rendered blogs/show.html.erb within layouts/application (351.2ms)
+Completed 200 OK in 450ms (Views: 432.1ms | ActiveRecord: 1.9ms)
+
+
+Started POST "/blogs/2/comments" for ::1 at 2017-07-08 19:35:23 +0900
+Processing by CommentsController#create as JS
+  Parameters: {"utf8"=>"✓", "comment"=>{"blog_id"=>"2", "content"=>"comment"}, "commit"=>"登録する", "blog_id"=>"2"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mBlog Load (0.2ms)[0m  [1mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "comments" ("blog_id", "content", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["blog_id", 2], ["content", "comment"], ["user_id", 2], ["created_at", "2017-07-08 10:35:23.764654"], ["updated_at", "2017-07-08 10:35:23.764654"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."blog_id" = $1[0m  [["blog_id", 2]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered comments/_index.html.erb (5.3ms)
+  Rendered comments/index.js.erb (7.9ms)
+Completed 200 OK in 46ms (Views: 37.9ms | ActiveRecord: 2.3ms)
