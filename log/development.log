@@ -8793,3 +8793,45 @@ Processing by CommentsController#destroy as JS
   Rendered comments/_index.html.erb (21.2ms)
   Rendered comments/index.js.erb (33.5ms)
 Completed 200 OK in 69ms (Views: 54.1ms | ActiveRecord: 6.5ms)
+
+
+Started GET "/" for ::1 at 2017-07-08 17:50:54 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by TopController#index as HTML
+  Rendered top/index.html.erb within layouts/application (614.2ms)
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+Completed 200 OK in 803ms (Views: 795.2ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/assets/header.jpg" for ::1 at 2017-07-08 17:50:55 +0900
+
+
+Started GET "/blogs" for ::1 at 2017-07-08 17:50:59 +0900
+Processing by BlogsController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mBlog Load (0.9ms)[0m  SELECT "blogs".* FROM "blogs"
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered blogs/index.html.erb within layouts/application (25.0ms)
+Completed 200 OK in 134ms (Views: 119.2ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/blogs/2" for ::1 at 2017-07-08 17:51:02 +0900
+Processing by BlogsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mBlog Load (0.2ms)[0m  [1mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mComment Load (0.3ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."blog_id" = $1  [["blog_id", 2]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered comments/_index.html.erb (4.9ms)
+  Rendered comments/_form.html.erb (378.8ms)
+  Rendered blogs/show.html.erb within layouts/application (390.9ms)
+Completed 200 OK in 489ms (Views: 467.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/blogs" for ::1 at 2017-07-08 17:51:08 +0900
+Processing by BlogsController#index as HTML
+  [1m[35mUser Load (1.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mBlog Load (0.2ms)[0m  [1mSELECT "blogs".* FROM "blogs"[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered blogs/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 104ms (Views: 100.2ms | ActiveRecord: 1.6ms)
