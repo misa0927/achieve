@@ -1,10 +1,5 @@
 Rails.application.routes.draw do
 
-
-  get 'relationships/create'
-
-  get 'relationships/destroy'
-
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   devise_for :users, controllers:{
     registrations: "users/registrations",
@@ -25,6 +20,10 @@ Rails.application.routes.draw do
   resources:users,only:[:index, :show]
 
   resources :relationships,only: [:create,:destroy]
+
+  resources :conversations do
+  resources :messages
+end
 
   if Rails.env.development?
     mount LetterOpenerWeb::Engine,at:"/letter_opener"
