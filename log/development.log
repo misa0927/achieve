@@ -20124,3 +20124,124 @@ Processing by NotificationsController#index as HTML
   Rendered notifications/index.html.erb within layouts/application (30.0ms)
 Completed 200 OK in 159ms (Views: 136.4ms | ActiveRecord: 6.3ms)
   [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users"[0m
+
+
+Started GET "/notifications/index" for ::1 at 2017-07-22 14:12:48 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by NotificationsController#index as HTML
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."user_id" = $1 AND "notifications"."read" = $2[0m  [["user_id", 2], ["read", "f"]]
+  [1m[35mNotification Load (0.3ms)[0m  SELECT "notifications".* FROM "notifications" WHERE "notifications"."user_id" = $1 AND "notifications"."read" = $2  ORDER BY "notifications"."created_at" DESC  [["user_id", 2], ["read", "f"]]
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT  "comments".* FROM "comments" WHERE "comments"."id" = $1 LIMIT 1[0m  [["id", 22]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mBlog Load (0.6ms)[0m  [1mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mComment Load (0.3ms)[0m  SELECT  "comments".* FROM "comments" WHERE "comments"."id" = $1 LIMIT 1  [["id", 21]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mBlog Load (0.2ms)[0m  SELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT  "comments".* FROM "comments" WHERE "comments"."id" = $1 LIMIT 1[0m  [["id", 19]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  Rendered notifications/index.html.erb within layouts/application (528.8ms)
+Completed 200 OK in 1125ms (Views: 1078.4ms | ActiveRecord: 9.8ms)
+
+
+Started GET "/blogs" for ::1 at 2017-07-22 14:13:10 +0900
+Processing by BlogsController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."user_id" = $1 AND "notifications"."read" = $2[0m  [["user_id", 2], ["read", "f"]]
+  [1m[35mBlog Load (0.2ms)[0m  SELECT "blogs".* FROM "blogs"
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered blogs/index.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 106ms (Views: 101.7ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/notifications/index" for ::1 at 2017-07-22 14:13:14 +0900
+Processing by NotificationsController#index as HTML
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."user_id" = $1 AND "notifications"."read" = $2[0m  [["user_id", 2], ["read", "f"]]
+  [1m[35mNotification Load (0.8ms)[0m  SELECT "notifications".* FROM "notifications" WHERE "notifications"."user_id" = $1 AND "notifications"."read" = $2  ORDER BY "notifications"."created_at" DESC  [["user_id", 2], ["read", "f"]]
+  [1m[36mComment Load (0.4ms)[0m  [1mSELECT  "comments".* FROM "comments" WHERE "comments"."id" = $1 LIMIT 1[0m  [["id", 22]]
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mBlog Load (0.4ms)[0m  [1mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mComment Load (0.5ms)[0m  SELECT  "comments".* FROM "comments" WHERE "comments"."id" = $1 LIMIT 1  [["id", 21]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mBlog Load (0.3ms)[0m  SELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT  "comments".* FROM "comments" WHERE "comments"."id" = $1 LIMIT 1[0m  [["id", 19]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  Rendered notifications/index.html.erb within layouts/application (19.0ms)
+Completed 200 OK in 126ms (Views: 117.1ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/notifications/index" for ::1 at 2017-07-22 14:14:43 +0900
+Processing by NotificationsController#index as HTML
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36m (0.8ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."user_id" = $1 AND "notifications"."read" = $2[0m  [["user_id", 2], ["read", "f"]]
+  [1m[35mNotification Load (0.4ms)[0m  SELECT "notifications".* FROM "notifications" WHERE "notifications"."user_id" = $1 AND "notifications"."read" = $2  ORDER BY "notifications"."created_at" DESC  [["user_id", 2], ["read", "f"]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT  "comments".* FROM "comments" WHERE "comments"."id" = $1 LIMIT 1[0m  [["id", 22]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mBlog Load (0.2ms)[0m  [1mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT  "comments".* FROM "comments" WHERE "comments"."id" = $1 LIMIT 1  [["id", 21]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mBlog Load (0.2ms)[0m  SELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT  "comments".* FROM "comments" WHERE "comments"."id" = $1 LIMIT 1[0m  [["id", 19]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  Rendered notifications/index.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 138ms (Views: 132.1ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/notifications.self-c5609de0dbc151f8f9be5b1bd95982060d04c4bf25e70e056381bb6f98350f07.css?body=1" for ::1 at 2017-07-22 14:14:43 +0900
+
+
+Started GET "/blogs" for ::1 at 2017-07-22 14:15:21 +0900
+Processing by BlogsController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."user_id" = $1 AND "notifications"."read" = $2[0m  [["user_id", 2], ["read", "f"]]
+  [1m[35mBlog Load (0.2ms)[0m  SELECT "blogs".* FROM "blogs"
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered blogs/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 109ms (Views: 105.7ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/notifications/index" for ::1 at 2017-07-22 14:15:26 +0900
+Processing by NotificationsController#index as HTML
+  [1m[35mUser Load (1.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."user_id" = $1 AND "notifications"."read" = $2[0m  [["user_id", 2], ["read", "f"]]
+  [1m[35mNotification Load (0.5ms)[0m  SELECT "notifications".* FROM "notifications" WHERE "notifications"."user_id" = $1 AND "notifications"."read" = $2  ORDER BY "notifications"."created_at" DESC  [["user_id", 2], ["read", "f"]]
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT  "comments".* FROM "comments" WHERE "comments"."id" = $1 LIMIT 1[0m  [["id", 22]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mBlog Load (0.1ms)[0m  [1mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT  "comments".* FROM "comments" WHERE "comments"."id" = $1 LIMIT 1  [["id", 21]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mBlog Load (0.2ms)[0m  SELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mComment Load (0.4ms)[0m  [1mSELECT  "comments".* FROM "comments" WHERE "comments"."id" = $1 LIMIT 1[0m  [["id", 19]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  Rendered notifications/index.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 138ms (Views: 130.4ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/notifications/index" for ::1 at 2017-07-22 14:16:59 +0900
+Processing by NotificationsController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE "notifications"."user_id" = $1 AND "notifications"."read" = $2[0m  [["user_id", 2], ["read", "f"]]
+  [1m[35mNotification Load (0.3ms)[0m  SELECT "notifications".* FROM "notifications" WHERE "notifications"."user_id" = $1 AND "notifications"."read" = $2  ORDER BY "notifications"."created_at" DESC  [["user_id", 2], ["read", "f"]]
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT  "comments".* FROM "comments" WHERE "comments"."id" = $1 LIMIT 1[0m  [["id", 22]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mBlog Load (0.1ms)[0m  [1mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT  "comments".* FROM "comments" WHERE "comments"."id" = $1 LIMIT 1  [["id", 21]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mBlog Load (0.1ms)[0m  SELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT  "comments".* FROM "comments" WHERE "comments"."id" = $1 LIMIT 1[0m  [["id", 19]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  Rendered notifications/index.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 142ms (Views: 137.3ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/notifications.self-a80222b258b7a5aa9c6c21111e1b9f33f62c2c67b2a8b5e48208a9462c025e87.css?body=1" for ::1 at 2017-07-22 14:16:59 +0900
