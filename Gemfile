@@ -75,3 +75,16 @@ gem 'mini_magick'
 gem 'pusher'
 
 gem 'fog'
+
+gem 'dotenv-rails'
+gem 'unicorn'
+
+gem 'therubyracer',platforms: :ruby
+
+group :development, :test do
+
+  gem 'capistrano', '3.6.0'
+  gem 'capistrano-bundler'
+  gem 'capistrano-rbenv'
+  gem 'capistrano3-unicorn'
+end
