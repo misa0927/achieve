@@ -20245,3 +20245,160 @@ Completed 200 OK in 142ms (Views: 137.3ms | ActiveRecord: 1.8ms)
 
 
 Started GET "/assets/notifications.self-a80222b258b7a5aa9c6c21111e1b9f33f62c2c67b2a8b5e48208a9462c025e87.css?body=1" for ::1 at 2017-07-22 14:16:59 +0900
+
+
+Started GET "/" for ::1 at 2017-09-02 15:23:54 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (7.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by TopController#index as HTML
+  Rendered top/index.html.erb within layouts/application (653.9ms)
+Completed 200 OK in 867ms (Views: 860.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blogs.self-613e8ff08e11212749c108e2c43e18c64b451f16134cc3b9c530e9aa07378d65.css?body=1" for ::1 at 2017-09-02 15:23:55 +0900
+
+
+Started GET "/assets/bootstrap_and_overrides.self-2cb3834583dfbaf0a39c7139750bf963e05d79cbe811126997e013400be5d8dc.css?body=1" for ::1 at 2017-09-02 15:23:55 +0900
+
+
+Started GET "/assets/comments.self-72df95f4f39ba92fe42ccbad52d93493f24235029e9bbd9d9e5cc651b53314bc.css?body=1" for ::1 at 2017-09-02 15:23:55 +0900
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.self-c35a8da3f7b9d476e96923a732a01160f611953b5946580383336776a666d2d7.css?body=1" for ::1 at 2017-09-02 15:23:55 +0900
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.self-603f330c29af013305325569c8c75d03d688963abd8cde4fffec17b5ce417bfb.css?body=1" for ::1 at 2017-09-02 15:23:55 +0900
+
+
+Started GET "/assets/contacts.self-b23ce5300c685bdfcb9d0f70a634d4b099a3d0c7a420945978c8bac45e32bd65.css?body=1" for ::1 at 2017-09-02 15:23:55 +0900
+
+
+Started GET "/assets/conversations.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2017-09-02 15:23:55 +0900
+
+
+Started GET "/assets/messages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2017-09-02 15:23:55 +0900
+
+
+Started GET "/assets/normalize.self-4752cb3bbe5f7fa07b3333e9911e87e6b759f4d254b9bd7aa4a7f77ef152f923.css?body=1" for ::1 at 2017-09-02 15:23:55 +0900
+
+
+Started GET "/assets/notifications.self-a80222b258b7a5aa9c6c21111e1b9f33f62c2c67b2a8b5e48208a9462c025e87.css?body=1" for ::1 at 2017-09-02 15:23:55 +0900
+
+
+Started GET "/assets/poems.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2017-09-02 15:23:55 +0900
+
+
+Started GET "/assets/relationships.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2017-09-02 15:23:55 +0900
+
+
+Started GET "/assets/top.self-40bd3a244e8ec9b2a7e6830a96def7e865e25150ddfccf3965855beb0988ae5c.css?body=1" for ::1 at 2017-09-02 15:23:55 +0900
+
+
+Started GET "/assets/users.self-3b2c91f3d2f106e780a33a6215964609f98fc6ff9516f023b2c470ed078c3163.css?body=1" for ::1 at 2017-09-02 15:23:55 +0900
+
+
+Started GET "/assets/users/omniauth_callbacks.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2017-09-02 15:23:55 +0900
+
+
+Started GET "/assets/users/registrations.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2017-09-02 15:23:55 +0900
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2017-09-02 15:23:55 +0900
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2017-09-02 15:23:55 +0900
+
+
+Started GET "/assets/jquery.turbolinks.self-176b9819f30444d441e820bbccd3264fe57753aeafd54dec732b0dbc77129a2a.js?body=1" for ::1 at 2017-09-02 15:23:55 +0900
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2017-09-02 15:23:55 +0900
+
+
+Started GET "/assets/twitter/bootstrap/transition.self-09ff30b1e8a93d1f7728b9855f55d9c9d8d5734c8861e0d8139994e50944572a.js?body=1" for ::1 at 2017-09-02 15:23:55 +0900
+
+
+Started GET "/assets/twitter/bootstrap/alert.self-a29e91e8cd3ddaba9bbc466901d53ec2127e9256b9b941905d525a3a716bd1a5.js?body=1" for ::1 at 2017-09-02 15:23:55 +0900
+
+
+Started GET "/assets/twitter/bootstrap/modal.self-72f95ffa1071297725a9ac91989693d56d1abf23f441a47455073b0da2857a5b.js?body=1" for ::1 at 2017-09-02 15:23:55 +0900
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.self-9314126777c6be5443e37ea7f7967d7914d72b3e60449ba50edc967446373059.js?body=1" for ::1 at 2017-09-02 15:23:55 +0900
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.self-a155b9d4b2f978905f0326c0f6635e1134fe91c6bfbfcbad079fa24a9fef2b0e.js?body=1" for ::1 at 2017-09-02 15:23:56 +0900
+
+
+Started GET "/assets/twitter/bootstrap/tab.self-122235057fbd4c6c7da377d59dc58f47b44cb1088a2e38e6ee6ce9d8ac29a26a.js?body=1" for ::1 at 2017-09-02 15:23:56 +0900
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.self-11cf547be953f25f511cec668f6690473fd97b2f65502e4032f4030999a3f0c3.js?body=1" for ::1 at 2017-09-02 15:23:56 +0900
+
+
+Started GET "/assets/twitter/bootstrap/popover.self-77d8e3a2499c1104ef146396a68b82469ee2bdb365199b874694698d10405e9a.js?body=1" for ::1 at 2017-09-02 15:23:56 +0900
+
+
+Started GET "/assets/twitter/bootstrap/button.self-a6cb16785434acb365ae426aef9f1fce05ed553cae7a965e4471c3da71509175.js?body=1" for ::1 at 2017-09-02 15:23:56 +0900
+
+
+Started GET "/assets/twitter/bootstrap/collapse.self-7dc8bfbc2fbfabd2bad62c58ff8ffeaf8f20fb87c7ca6cd35f06d4dc19632587.js?body=1" for ::1 at 2017-09-02 15:23:56 +0900
+
+
+Started GET "/assets/twitter/bootstrap/carousel.self-57eb8422043cf0a85b7a9dc6843916eb0a3e35b419c7798a5eb254b918997631.js?body=1" for ::1 at 2017-09-02 15:23:56 +0900
+
+
+Started GET "/assets/twitter/bootstrap/affix.self-d2b642d8fbfc1d7041e2edefd66683ada567a980789dcd6f94fddda0b33408b5.js?body=1" for ::1 at 2017-09-02 15:23:56 +0900
+
+
+Started GET "/assets/twitter/bootstrap.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2017-09-02 15:23:56 +0900
+
+
+Started GET "/assets/turbolinks.self-1d1fddf91adc38ac2045c51f0a3e05ca97d07d24d15a4dcbf705009106489e69.js?body=1" for ::1 at 2017-09-02 15:23:56 +0900
+
+
+Started GET "/assets/blogs.self-d3564175277b884762e4e75e436fc218835faca70e211f6ce6aecddb5dc5970a.js?body=1" for ::1 at 2017-09-02 15:23:56 +0900
+
+
+Started GET "/assets/bootstrap.self-fdc98dee79ee88255e10cac6caa91338165cb76cf0d263744d8d90011fc2ef8f.js?body=1" for ::1 at 2017-09-02 15:23:56 +0900
+
+
+Started GET "/assets/comments.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-09-02 15:23:56 +0900
+
+
+Started GET "/assets/contacts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-09-02 15:23:56 +0900
+
+
+Started GET "/assets/conversations.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-09-02 15:23:56 +0900
+
+
+Started GET "/assets/messages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-09-02 15:23:56 +0900
+
+
+Started GET "/assets/notifications.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-09-02 15:23:56 +0900
+
+
+Started GET "/assets/poems.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-09-02 15:23:56 +0900
+
+
+Started GET "/assets/relationships.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-09-02 15:23:56 +0900
+
+
+Started GET "/assets/scrolltop.self-370c5158798176972a951787b9f749f9077f3132d730f2d94316f6aced6d8536.js?body=1" for ::1 at 2017-09-02 15:23:56 +0900
+
+
+Started GET "/assets/top.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-09-02 15:23:56 +0900
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-09-02 15:23:56 +0900
+
+
+Started GET "/assets/users/omniauth_callbacks.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-09-02 15:23:56 +0900
+
+
+Started GET "/assets/users/registrations.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-09-02 15:23:56 +0900
+
+
+Started GET "/assets/application.self-7862a8a8b42407b4741a1adeeea35f0d13ddc4f702ec532adb0674491d296495.js?body=1" for ::1 at 2017-09-02 15:23:56 +0900
+
+
+Started GET "/assets/header.jpg" for ::1 at 2017-09-02 15:23:56 +0900

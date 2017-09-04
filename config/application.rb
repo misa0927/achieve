@@ -25,5 +25,11 @@ module Achieve
     config.action_view.field_error_proc = proc{ |html_tag,instance| html_tag}
 
     config.web_console.development_only = false
+
+    config.generators do |g|
+      g.assets  false
+      g.helper  false
+      end
+
   end
 end
