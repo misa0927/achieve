@@ -487,6 +487,7 @@ PLATFORMS
 DEPENDENCIES
   activeresource
   better_errors
+  binding_of_caller
   byebug
   cancan
   capistrano (= 3.6.0)
@@ -525,4 +526,8 @@ DEPENDENCIES
   web-console (~> 2.0)
 
 BUNDLED WITH
+<<<<<<< HEAD
    1.15.3
+=======
+   1.15.4
+>>>>>>> issues/#2
